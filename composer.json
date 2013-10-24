@@ -1,0 +1,20 @@
+{
+  "name": "vinyvicente/simple-youtube-listener",
+  "type": "library",
+  "description": "PHP library that provides a simple way to list videos of user of the Youtube",
+  "keywords": ["youtube", "videos", "internet", "link"],
+  "homepage": "https://github.com/vinyvicente/simple-youtube-listener",
+  "authors": [{
+    "name": "Vinicius Vicente",
+    "email": "vinyvicente@gmail.com"
+  }],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {
+      "Vinyvicente": "src/"
+    }
+  }
+}
