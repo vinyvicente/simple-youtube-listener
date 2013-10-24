@@ -11,8 +11,11 @@ This an simple library of list videos by users in http://www.youtube.com
 How to works:
 =======================
 
-use Vinyvicente\Youtube;
+    <?php
+      use Vinyvicente\Youtube;
 
-$youtube = Youtube::getInstance();
-
-$videos = $youtube->getListVideos('your user');
+      $youtube = Youtube::getInstance();
+      $videos = $youtube->getListVideos('your user');
+      
+      print_r($videos);
+     ?>
