@@ -1,4 +1,4 @@
-# Simple Youtube Listener [![Build Status](https://travis-ci.org/vinyvicente/simple-youtube-listener.png?branch=master)](https://travis-ci.org/vinivycente/simple-youtube-listener) #
+# Simple Youtube Listener #
 
 
 ## Overview ##
