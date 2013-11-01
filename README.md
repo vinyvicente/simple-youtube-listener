@@ -21,5 +21,5 @@ Package available on [Composer](http://packagist.org/packages/vinyvicente/simple
       $youtube = Youtube::getInstance();
       $videos = $youtube->getListVideos('your user');
       
-      print_r($videos);
+      print_r($videos->getItems());
      

@@ -42,7 +42,7 @@ class Youtube
      *
      * @param $user
      *
-     * @return array
+     * @return Listener\VideoCollection
      */
     public function getListVideos($user)
     {

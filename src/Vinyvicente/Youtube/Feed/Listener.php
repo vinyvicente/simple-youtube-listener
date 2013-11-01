@@ -3,12 +3,15 @@
 namespace Vinyvicente\Youtube\Feed;
 
 use Vinyvicente\YException;
-use Vinyvicente\Youtube\Feed\User;
+use Vinyvicente\Youtube\Feed\Entity\Video;
+use Vinyvicente\Youtube\Feed\Listener\VideoCollection;
 
 /**
  * Class Listener
  *
  * @package Vinyvicente\Youtube\Feed
+ *
+ * @author Vinicius V. de Oliveira <vinyvicente@gmail.com>
  */
 class Listener
 {
@@ -63,32 +66,32 @@ class Listener
     }
 
     /**
-     * @return array
+     * @return VideoCollection
      */
     protected function parseResult()
     {
-        $videos = array();
+        $videos = new VideoCollection();
 
         if ($this->result != null) {
 
             $xml = new \SimpleXMLElement($this->result);
 
-            foreach ($xml->entry as $video) {
+            foreach ($xml->entry as $entry) {
 
-                $url = (string)$video->link['href'];
+                $url = (string)$entry->link['href'];
 
                 // gets ID
                 parse_str(parse_url($url, PHP_URL_QUERY), $params);
 
                 $id = $params['v'];
 
-                // Parse a array in data
-                $videos[] = array(
-                    'id'        => $id,
-                    'title'     => (string) $video->title,
-                    'thumbnail' => 'http://i' . rand(1, 4) .'.ytimg.com/vi/'. $id .'/hqdefault.jpg',
-                    'url'       => $url
-                );
+                $video = new Video();
+                $video->setId($id)
+                    ->setTitle((string)$entry->title)
+                    ->setThumbnail('http://i' . rand(1, 4) .'.ytimg.com/vi/'. $id .'/hqdefault.jpg')
+                    ->setUrl($url);
+
+                $videos->addItem($video);
             }
         }
 
@@ -96,7 +99,7 @@ class Listener
     }
 
     /**
-     * @return array
+     * @return VideoCollection
      */
     public function getVideos()
     {
