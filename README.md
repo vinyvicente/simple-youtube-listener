@@ -1,5 +1,7 @@
-Simple Youtube Listener
-=======================
+# Simple Youtube Listener [![Build Status](https://travis-ci.org/vinyvicente/simple-youtube-listener.png?branch=master)](https://travis-ci.org/vinivycente/simple-youtube-listener) #
+
+
+## Overview ##
 
 This an simple library of list videos by users in http://www.youtube.com
 
@@ -8,8 +10,11 @@ This an simple library of list videos by users in http://www.youtube.com
  - CURL
  - SimpleXML
 
-How to works:
-=======================
+## Installation ##
+
+Package available on [Composer](http://packagist.org/packages/vinyvicente/simple-youtube-listener). Autoloading is [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md) compatible.
+
+## How it works ##
 
       use Vinyvicente\Youtube;
       
