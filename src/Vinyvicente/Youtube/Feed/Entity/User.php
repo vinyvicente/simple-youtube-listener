@@ -1,13 +1,13 @@
 <?php
 
-namespace Vinyvicente\Youtube\Feed;
+namespace Vinyvicente\Youtube\Feed\Entity;
 
 /**
  * Class User
  *
  * @package Vinyvicente\Youtube\Feed
  */
-class User
+class User extends EntityAbstract
 {
     /**
      * @var string

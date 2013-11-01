@@ -9,9 +9,9 @@
  */
 namespace Vinyvicente;
 
-use Vinyvicente\YException;
-use Vinyvicente\Youtube\Feed\Listener;
-use Vinyvicente\Youtube\Feed\User;
+use Vinyvicente\Youtube\Feed\Collection\VideoCollection;
+use Vinyvicente\Youtube\Feed\Entity\User;
+use Vinyvicente\Youtube\Feed\Collection;
 
 /**
  * Class Youtube
@@ -42,7 +42,7 @@ class Youtube
      *
      * @param $user
      *
-     * @return Listener\VideoCollection
+     * @return VideoCollection
      */
     public function getListVideos($user)
     {
@@ -52,12 +52,12 @@ class Youtube
             $userYoutube = new User();
             $userYoutube->setUser($user);
 
-            $listener = new Listener($userYoutube);
+            $listener = new Collection($userYoutube);
 
             $result =  $listener->getVideos();
 
         } catch (YException $e) {
-            echo 'An error has occurred';
+            echo 'An error has occurred: ' . $e->getMessage();
             exit;
         }
 
