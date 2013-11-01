@@ -4,16 +4,17 @@ namespace Vinyvicente\Youtube\Feed;
 
 use Vinyvicente\YException;
 use Vinyvicente\Youtube\Feed\Entity\Video;
-use Vinyvicente\Youtube\Feed\Listener\VideoCollection;
+use Vinyvicente\Youtube\Feed\Entity\User;
+use Vinyvicente\Youtube\Feed\Collection\VideoCollection;
 
 /**
- * Class Listener
+ * Class Collection
  *
  * @package Vinyvicente\Youtube\Feed
  *
  * @author Vinicius V. de Oliveira <vinyvicente@gmail.com>
  */
-class Listener
+class Collection
 {
     /**
      * @var string

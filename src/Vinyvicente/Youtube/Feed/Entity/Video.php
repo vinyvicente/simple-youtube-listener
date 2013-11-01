@@ -9,7 +9,7 @@ namespace Vinyvicente\Youtube\Feed\Entity;
  *
  * @author Vinicius V. de Oliveira <vinyvicente@gmail.com>
  */
-class Video
+class Video extends EntityAbstract
 {
     /**
      * @var string

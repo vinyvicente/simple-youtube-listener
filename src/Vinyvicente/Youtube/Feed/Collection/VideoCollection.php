@@ -1,13 +1,13 @@
 <?php
 
-namespace Vinyvicente\Youtube\Feed\Listener;
+namespace Vinyvicente\Youtube\Feed\Collection;
 
 use Vinyvicente\Youtube\Feed\Entity\Video;
 
 /**
  * Class VideoCollection
  *
- * @package Vinyvicente\Youtube\Feed\Listener
+ * @package Vinyvicente\Youtube\Feed\Collection
  *
  * @author Vinicius V. de Oliveira <vinyvicente@gmail.com>
  */
